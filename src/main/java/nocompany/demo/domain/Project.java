@@ -10,7 +10,10 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-public class project {
+@Getter
+@Setter
+@Data
+public class Project {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,9 +27,7 @@ public class project {
     private Date createAd;
     private Date updateAt;
 
-    public project() {
-
-    }
+    public Project() {}
 
     @PrePersist
     protected void onCreate() {
